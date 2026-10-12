@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" role="img" aria-labelledby="title">
+  <title id="title">Tasty Bites food illustration</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#fff2dd"/>
+      <stop offset="1" stop-color="#f5c6a0"/>
+    </linearGradient>
+    <linearGradient id="crust" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ffd675"/>
+      <stop offset="1" stop-color="#e78537"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="440" fill="url(#bg)"/>
+  <circle cx="400" cy="220" r="173" fill="#fffaf1" opacity=".9"/>
+  <circle cx="400" cy="220" r="145" fill="url(#crust)"/>
+  <circle cx="400" cy="220" r="124" fill="#c74730"/>
+  <circle cx="400" cy="220" r="105" fill="#ffe2a0"/>
+  <g fill="#b6382e">
+    <circle cx="357" cy="157" r="18"/>
+    <circle cx="442" cy="165" r="18"/>
+    <circle cx="479" cy="229" r="18"/>
+    <circle cx="420" cy="283" r="18"/>
+    <circle cx="335" cy="264" r="18"/>
+    <circle cx="322" cy="207" r="18"/>
+  </g>
+  <g fill="#527a42">
+    <path d="M395 132c24-18 35-8 20 9-14 16-27 13-20-9Z"/>
+    <path d="M474 184c24-10 33 2 14 14-18 11-29 5-14-14Z"/>
+    <path d="M367 291c17-21 30-15 20 5-10 19-23 19-20-5Z"/>
+  </g>
+  <g fill="#fff9e8" opacity=".9">
+    <circle cx="375" cy="201" r="9"/>
+    <circle cx="432" cy="224" r="9"/>
+    <circle cx="388" cy="252" r="9"/>
+  </g>
+  <text x="400" y="397" fill="#6f3828" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="5">TASTY BITES</text>
+</svg>

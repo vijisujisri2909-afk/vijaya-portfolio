@@ -1,0 +1,644 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+            color: #222;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #111827;
+        }
+      .navbar-brand {
+            color: #ffffff !important;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: white !important;
+            margin-left: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #8b5cf6 !important;
+            transform: translateY(-2px);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #111827, #4c1d95, #7c3aed);
+            color: white;
+            padding-top: 70px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            font-weight: bold;
+            animation: slideLeft 1s ease;
+        }
+
+        .hero p {
+            font-size: 20px;
+            animation: slideLeft 1.4s ease;
+        }
+
+        .hero-img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 7px solid white;
+            box-shadow: 0 0 40px rgba(255,255,255,0.4);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Buttons */
+        .btn-custom {
+            background: white;
+            color: #5b21b6;
+            border-radius: 30px;
+            padding: 12px 28px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-custom:hover {
+            background: #111827;
+            color: white;
+            transform: scale(1.08);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-weight: bold;
+            color: #4c1d95;
+        }
+
+        /* About */
+        .about-box {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .about-box:hover {
+            transform: translateY(-8px);
+        }
+
+        /* Skills */
+        .skill-card {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.4s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 10px 30px rgba(91,33,182,0.2);
+        }
+
+        .skill-card i {
+            font-size: 45px;
+            color: #6d28d9;
+            margin-bottom: 15px;
+        }
+
+        /* Projects */
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.4s;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .project-top {
+            height: 130px;
+            background: linear-gradient(135deg, #7c3aed, #ec4899);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 50px;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        /* Contact */
+        .contact-box {
+            background: linear-gradient(135deg, #4c1d95, #7c3aed);
+            color: white;
+            padding: 50px;
+            border-radius: 25px;
+        }
+
+        .contact-box input,
+        .contact-box textarea {
+            border-radius: 12px;
+            border: none;
+            padding: 13px;
+        }
+
+        /* Footer */
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 25px;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #a78bfa;
+            transform: scale(1.2);
+        }
+
+        /* Animations */
+        @keyframes slideLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-70px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Mobile */
+        @media(max-width: 768px) {
+
+            .hero {
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero-img {
+                width: 220px;
+                height: 220px;
+                margin-top: 40px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#">MyPortfolio</a>
+
+        <button class="navbar-toggler bg-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-7">
+
+                <p>Hello, I'm</p>
+
+                <h1>Viji Parvathi</h1>
+
+                <h3>Web Developer & Designer</h3>
+
+                <p class="mt-3">
+                    I create beautiful, responsive and user-friendly
+                    websites using modern web technologies.
+                </p>
+
+                <a href="#projects"
+                   class="btn btn-custom mt-3">
+                    View My Work
+                </a>
+
+                <a href="VIJI RESUME 2.rtf" class="btn btn-primary mt-3" target="_blank">
+                            
+                RESUME
+                 </a>
+
+            </div>
+
+            <div class="col-md-5 text-center">
+
+                <!-- Replace this image URL with your photo -->
+                <img
+                    src="VIJI PHOTO.png"
+                    class="hero-img"
+                    alt="Profile Photo"
+                    width="150"
+                    height="150">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>Get to know me</p>
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-9">
+
+                <div class="about-box text-center">
+
+                    <h3>Hello! 👋</h3>
+
+                    <p>
+                        I am a passionate web developer who enjoys
+                        creating attractive and responsive websites.
+                        I love learning new technologies and turning
+                        ideas into real-world projects.
+                    </p>
+
+                    <p>
+                        My goal is to build websites that are simple,
+                        modern, fast and enjoyable to use.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills" class="bg-light">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>My Skills</h2>
+            <p>Technologies I work with</p>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-3 col-sm-6">
+                <div class="skill-card">
+                    <i class="bi bi-filetype-html"></i>
+                    <h4>HTML</h4>
+                    <p>Creating clean website structures.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="skill-card">
+                    <i class="bi bi-filetype-css"></i>
+                    <h4>CSS</h4>
+                    <p>Designing beautiful user interfaces.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="skill-card">
+                    <i class="bi bi-bootstrap"></i>
+                    <h4>Bootstrap</h4>
+                    <p>Building responsive layouts.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6">
+                <div class="skill-card">
+                    <i class="bi bi-filetype-js"></i>
+                    <h4>JavaScript</h4>
+                    <p>Adding interactive features.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>My Projects</h2>
+            <p>Some of my recent work</p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="project-card">
+
+                    <div class="project-top">
+                        <i class="bi bi-check2-square"></i>
+                    </div>
+
+                    <div class="project-content">
+
+                        <h4>To-Do List</h4>
+
+                        <p>
+                            A simple task management application
+                            using HTML, CSS and JavaScript.
+                        </p>
+
+                        <a href="#" class="btn btn-dark">
+                            View Project
+                        </a>
+                         
+                        
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="project-card">
+
+                    <div class="project-top">
+                        <i class="bi bi-cart"></i>
+                    </div>
+
+                    <div class="project-content">
+
+                        <h4>Shopping Website</h4>
+
+                        <p>
+                            A responsive shopping website designed
+                            using Bootstrap and CSS.
+                        </p>
+
+                        <a href="#" class="btn btn-dark">
+                            View Project
+                        </a>
+
+                        
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="project-card">
+
+                    <div class="project-top">
+                        <i class="bi bi-person"></i>
+                    </div>
+
+                    <div class="project-content">
+
+                        <h4>Portfolio Website</h4>
+
+                        <p>
+                            A modern personal portfolio showcasing
+                            my skills and projects.
+                        </p>
+
+                        <a href="#" class="btn btn-dark">
+                            View Project
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <div class="text-center mb-4">
+
+                <h2>Contact Me</h2>
+
+                <p>
+                    Have a project in mind? Let's work together!
+                </p>
+
+            </div>
+
+            <div class="row justify-content-center">
+
+                <div class="col-md-8">
+
+                    <form>
+
+                        <input
+                            type="text"
+                            class="form-control mb-3"
+                            placeholder="Your Name">
+
+                        <input
+                            type="email"
+                            class="form-control mb-3"
+                            placeholder="Your Email">
+
+                        <textarea
+                            class="form-control mb-3"
+                            rows="5"
+                            placeholder="Your Message"></textarea>
+
+                        <div class="text-center">
+
+                            <button
+                                type="submit"
+                                class="btn btn-light px-5">
+                                Send Message
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="social-icons">
+
+        <a href="#">
+            <i class="bi bi-github"></i>
+        </a>
+
+        <a href="#">
+            <i class="bi bi-linkedin"></i>
+        </a>
+
+        <a href="#">
+            <i class="bi bi-instagram"></i>
+        </a>
+
+    </div>
+
+    <p class="mb-0">
+        © 2026 Viji Parvathi | All Rights Reserved
+    </p>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>
